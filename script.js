@@ -42,7 +42,7 @@ const pilihRock = document.querySelector(".rock");
 pilihRock.addEventListener("click", function () {
   const pilihanComputer = getPilihanComputer();
   const pilihanPlayer = pilihRock.className;
-
+  pilihRock.style.backgroundColor = "gray";
   getLatarComputer(pilihanComputer);
 
   const hasil = getHasil(pilihanComputer, pilihanPlayer);
@@ -62,6 +62,7 @@ const pilihScissor = document.querySelector(".scissor");
 pilihScissor.addEventListener("click", function () {
   const pilihanComputer = getPilihanComputer();
   const pilihanPlayer = pilihScissor.className;
+  pilihScissor.style.backgroundColor = "gray";
   getLatarComputer(pilihanComputer);
   const hasil = getHasil(pilihanComputer, pilihanPlayer);
   const info = document.querySelector(".info");
@@ -72,6 +73,7 @@ const pilihPapper = document.querySelector(".papper");
 pilihPapper.addEventListener("click", function () {
   const pilihanComputer = getPilihanComputer();
   const pilihanPlayer = pilihPapper.className;
+  pilihPapper.style.backgroundColor = "gray";
   getLatarComputer(pilihanComputer);
   const hasil = getHasil(pilihanComputer, pilihanPlayer);
   const info = document.querySelector(".info");
