@@ -24,7 +24,7 @@ function getHasil(comp, player) {
 //}
 
 //fungsi mengganti latar pilihan komputer
-function getLatarComputer() {
+function getLatarComputer(comp) {
   var compPilihRock = document.getElementById("img-computer-rock");
   var compPilihScissor = document.getElementById("img-computer-scissor");
   var compPilihPapper = document.getElementById("img-computer-papper");
@@ -43,7 +43,7 @@ pilihRock.addEventListener("click", function () {
   const pilihanComputer = getPilihanComputer();
   const pilihanPlayer = pilihRock.className;
 
-  // getLatarComputer(); untuk memanggil function mengganti latar komputer
+  getLatarComputer(pilihanComputer);
 
   const hasil = getHasil(pilihanComputer, pilihanPlayer);
   const info = document.querySelector(".info");
@@ -62,9 +62,8 @@ const pilihScissor = document.querySelector(".scissor");
 pilihScissor.addEventListener("click", function () {
   const pilihanComputer = getPilihanComputer();
   const pilihanPlayer = pilihScissor.className;
+  getLatarComputer(pilihanComputer);
   const hasil = getHasil(pilihanComputer, pilihanPlayer);
-  // getLatarComputer(); untuk memanggil function mengganti latar komputer
-
   const info = document.querySelector(".info");
   info.innerHTML = hasil;
 });
@@ -73,9 +72,8 @@ const pilihPapper = document.querySelector(".papper");
 pilihPapper.addEventListener("click", function () {
   const pilihanComputer = getPilihanComputer();
   const pilihanPlayer = pilihPapper.className;
+  getLatarComputer(pilihanComputer);
   const hasil = getHasil(pilihanComputer, pilihanPlayer);
-  // getLatarComputer(); untuk memanggil function mengganti latar komputer
-
   const info = document.querySelector(".info");
   info.innerHTML = hasil;
 });
